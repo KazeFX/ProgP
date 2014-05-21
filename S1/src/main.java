@@ -1,14 +1,14 @@
-import javax.swing.*;
+import java.io.File;
 
 /**
  * Created by M4Sh on 2014-05-21.
  */
 
 public class Main {
-    RegexTranslator regex = new RegexTranslator();
+    private static RegexTranslator regex;
 
-    public static void main(String[] args) {
-        JOptionPane.showInputDialog("ENTER THE FRAY)");
-        JOptionPane.showMessageDialog(null," ");
+    public static void main(File file) {
+        regex = new RegexTranslator(file);
+        regex.doTheMagic();
     }
 }
